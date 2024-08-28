@@ -1,0 +1,5 @@
+# The fundamental knowledge of Go
+
+I assume the readers have previous knowledge of some other programming language like C++ or Python. Complete beginners should still be able to follow along. However, I change the order to introduce topics to fit the needs of people who want to learn the language faster and start developing large projects.
+
+In `1_hello_basics`, I will show you the basic usage of the **package system** in Go. We use go module rather than the `$GOPATH` environment variable as this feature has been fully supported since go 1.13. Users do not need to put go source code in certain paths that follow the conventions. You can use any folder you like but just set the module name in `go.mod`. You can take a look at the code to see how a package can be imported in Go, and what folder structure your Go project should be.
