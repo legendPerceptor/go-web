@@ -1,0 +1,18 @@
+{
+  "books": [
+    {
+      "title": "Fourth Wing",
+      "author": "Rebecca Yarros",
+      "date": "2023-04-05",
+      "image": "https://picsum.photos/seed/8448/300/200",
+      "id": 2
+    },
+    {
+      "title": "Fourth Wing 4",
+      "author": "Rebecca Yarros",
+      "date": "2023-04-13",
+      "image": "https://picsum.photos/seed/8654/300/200",
+      "id": 3
+    }
+  ]
+}

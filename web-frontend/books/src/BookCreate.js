@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-function BookCreate({onCreateBook, id}) {
+function BookCreate({onCreateBook}) {
     const [bookTitle, setBookTitle] = useState("");
     const [date, setBookDate] = useState("");
     const [author, setAuthor] = useState("");
@@ -12,8 +12,6 @@ function BookCreate({onCreateBook, id}) {
             title: bookTitle,
             date: date,
             author: author,
-            id: id,
-            image: `https://picsum.photos/seed/${id}/300/200`
         };
         console.log("The book to be added:", book);
         onCreateBook(book);
