@@ -1,6 +1,9 @@
-import {useState} from 'react';
+import {useState, useContext} from 'react';
+import BooksContext from '../context/books';
 
-function BookCreate({onCreateBook}) {
+function BookCreate() {
+    const {handleAddBook} = useContext(BooksContext);
+
     const [bookTitle, setBookTitle] = useState("");
     const [date, setBookDate] = useState("");
     const [author, setAuthor] = useState("");
@@ -14,7 +17,7 @@ function BookCreate({onCreateBook}) {
             author: author,
         };
         console.log("The book to be added:", book);
-        onCreateBook(book);
+        handleAddBook(book);
     };
 
     return (

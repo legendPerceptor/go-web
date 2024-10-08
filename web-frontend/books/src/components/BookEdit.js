@@ -1,6 +1,8 @@
-import {useState} from 'react';
+import {useContext, useState} from 'react';
+import BooksContext from '../context/books';
 
-function BookEdit({book, onModify, setShowEdit}) {
+function BookEdit({book, setShowEdit}) {
+    const {modifyBookById: onModify} = useContext(BooksContext);
     const [title, setTitle] = useState(book.title);
     const [author, setAuthor] = useState(book.author);
     const [date, setDate] = useState(book.date);

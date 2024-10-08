@@ -1,8 +1,9 @@
-import {useState} from 'react'
+import {useContext, useState} from 'react'
 import BookEdit from './BookEdit';
+import BooksContext from '../context/books';
 
-function BookShow({book, onDelete, onModify}) {
-
+function BookShow({book}) {
+    const {removeBookById:onDelete} = useContext(BooksContext);
     const [showEdit, setShowEdit] = useState(false);
 
     const handleRemoveButtonClick = () => {
@@ -20,7 +21,7 @@ function BookShow({book, onDelete, onModify}) {
         <p>Published Date: {book.date}</p>
     </div>;
     if (showEdit) {
-        content = <BookEdit book={book} onModify={onModify} setShowEdit={setShowEdit}/>
+        content = <BookEdit book={book} setShowEdit={setShowEdit}/>
     }
 
     return (
