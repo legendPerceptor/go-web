@@ -1,6 +1,6 @@
 
-import BookCreate from './BookCreate'
-import BookList from './BookList';
+import BookCreate from './components/BookCreate'
+import BookList from './components/BookList';
 import {useState, useEffect} from 'react';
 import axios from 'axios'
 
