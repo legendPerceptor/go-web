@@ -5,11 +5,11 @@ import {useEffect, useContext} from 'react';
 import BooksContext from './context/books';
 
 function App() {
-    const {fetchBooks} = useContext(BooksContext);
+    const {stableFetchBooks} = useContext(BooksContext);
 
     useEffect(()=> {
-        fetchBooks();
-    }, []);
+        stableFetchBooks();
+    }, [stableFetchBooks]);
 
     return (
         <div className="app">
