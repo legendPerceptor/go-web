@@ -1,29 +1,14 @@
-import { GoBell, GoCloud, GoDatabase } from "react-icons/go";
-import Button from './components/Button';
-
-import Accordion from './components/Accordion';
-
+import Dropdown from "./components/Dropdown";
+import { useState } from "react";
 function App() {
+    const [selection, setSelection] = useState(null);
+    const options = [
+        {label: "Red", value: "red"},
+        {label: "Green", value: "green"},
+        {label: "Blue", value: "blue"}
+    ]
 
-    const items = [
-        {
-            id: 'ljl35j',
-            label: "Can I use React on a project?",
-            content: "You can use React on any project you want."
-        },
-        {
-            id: '1l4j2',
-            label: "Can I use React on a project?",
-            content: "You can use React on any project you want."
-        },
-        {
-            id: 'kjl1l',
-            label: "Can I use React on a project?",
-            content: "You can use React on any project you want."
-        }
-    ];
-
-    return <Accordion items={items} />;
+    return <Dropdown options={options} value={selection} onChange={setSelection}/>;
 }
 
 export default App;
