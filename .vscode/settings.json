@@ -1,0 +1,27 @@
+{
+  // Enable Go modules support
+  "go.useLanguageServer": true,
+
+  // Use goimports for formatting
+  "go.formatTool": "goimports",
+
+  // Format on save
+  "editor.formatOnSave": true,
+
+  // Enable linting on save
+  "go.lintOnSave": "package",
+  "go.lintTool": "staticcheck",
+
+  // Enable autocomplete
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+
+  // Enable hints (inlay hints)
+  "gopls": {
+    "ui.inlayHint.enable": true
+  }
+}
