@@ -22,5 +22,6 @@ func dupstd() {
 
 func main() {
 	// dupstd()
-	dupFiles()
+	// dupFiles()
+	dup3()
 }
